@@ -4,10 +4,10 @@ import { Sidebar } from "@/components/Sidebar";
 import { useState } from "react";
 
 const Page = () => {
-  const [sidebarOpened, setSidebarOpened] = useState(true);
+  const [sidebarOpened, setSidebarOpened] = useState(false);
 
   const closeSidebar = () => {
-
+    setSidebarOpened(false);
   }
 
   return (
@@ -19,7 +19,7 @@ const Page = () => {
 
       </Sidebar>
       <section className="flex flex-col w-full">
-        ...
+        <button onClick={() => setSidebarOpened(true)}>Abrir Sidebar</button>
       </section>
     </main>
   );
